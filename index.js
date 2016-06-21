@@ -7,10 +7,8 @@ import {
 
 export default class CropImage extends Component{
     render() {
-        let source = this.props.source;
-        let crop = this.props.crop || source.crop;
 
-        let {source, crop, width, height, children, onPress} = this.props;
+        let {source, crop, width, height, children, style, onPress} = this.props;
 
         crop = crop || source.crop;
 
@@ -25,13 +23,18 @@ export default class CropImage extends Component{
                     height: crop.height,
                     width: crop.width,
                     backgroundColor: 'transparent'
-                }]}>
-                    <Image onPress={onPress} style={{
-                        marginTop: crop.top * -1,
-                        marginLeft: crop.left * -1,
-                        width: width,
-                        height: height
-                    }} source={source} resizeMode='contain'>
+                }, style]}>
+                    <Image
+                        onPress={onPress} 
+                        style={{
+                            marginTop: crop.top * -1,
+                            marginLeft: crop.left * -1,
+                            width: width,
+                            height: height
+                        }}
+                        source={source} 
+                        resizeMode='contain'
+                    >
                         {children}
                     </Image>
                 </View>

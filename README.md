@@ -17,7 +17,9 @@
 	class IconHome extends Component{
 		return (
 			<CropImage
-				source={require('./icon-business.png')}
+				source={{
+					uri: 'http://pic.c-ctrip.com/platform/h5/public/ico_bu_mini@2x.160225.png'
+				}}
 				crop={{
 					top: 0,
 					left: 0,
