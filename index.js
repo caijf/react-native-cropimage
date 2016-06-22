@@ -49,7 +49,7 @@ export default class CropImage extends Component{
         onPress: PropTypes.func
     };
 
-    static propTypes = {
+    static defaultProps = {
         onPress: ()=>{}
     };
 }
