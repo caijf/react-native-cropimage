@@ -42,7 +42,10 @@ export default class CropImage extends Component{
     }
 
     static propTypes = {
-        source: PropTypes.object.isRequired,
+        source: PropTypes.oneOfType([
+            PropTypes.object,
+            PropTypes.node
+        ]).isRequired,
         crop: PropTypes.object,
         width: PropTypes.number.isRequired,
         height: PropTypes.number.isRequired,
