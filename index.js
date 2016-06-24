@@ -10,7 +10,7 @@ export default class CropImage extends Component{
 
         let {source, crop, width, height, children, style, onPress} = this.props;
 
-        crop = crop || source.crop;
+        crop = crop || source.crop || {};
 
         crop.top = crop.top || 0;
         crop.left = crop.left || 0;
