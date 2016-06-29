@@ -49,11 +49,13 @@ export default class CropImage extends Component{
         crop: PropTypes.object,
         width: PropTypes.number.isRequired,
         height: PropTypes.number.isRequired,
-        onPress: PropTypes.func
+        onPress: PropTypes.func,
+        style: PropTypes.object
     };
 
     static defaultProps = {
-        onPress: ()=>{}
+        onPress: ()=>{},
+        style:{}
     };
 }
 

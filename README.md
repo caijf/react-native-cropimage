@@ -4,7 +4,7 @@
 
 ### Getting started
 
-安装 `react-native-cropimage`
+安装
 
 	npm install react-native-cropimage --save
 
@@ -43,4 +43,4 @@
 	- **width** - (Number) - 裁剪宽度，默认图片宽度
 	- **height** - (Number) - 裁剪高度，默认图片高度
 - **onPress** - (Function) - 点击图片回调（一般用不到，在用到的组件里写事件）
-- **style** - (Object, Array) - 图片外层样式，一般用不到
+- **style** - (Object) - 图片外层样式，一般用不到
