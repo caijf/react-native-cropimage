@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 
 import {
+	AppRegistry,
 	Platform,
 	View,
 	TouchableHighlight
 } from 'react-native';
 
-import CropImage from 'react-native-cropimage';
+import CropImage from '../../libs/react-native-cropimage/';
 
 
 class IconHotel extends Component{
@@ -22,9 +23,7 @@ class IconHotel extends Component{
 				}}
 				width={60}
 				height={120}
-				style={{
-					backgroundColor: 'red'
-				}}				
+				tintColor={'red'}				
 			/>
 		)
 	}
@@ -43,9 +42,7 @@ class IconTrain extends Component{
 				}}
 				width={60}
 				height={120}
-				style={{
-					backgroundColor: 'blue'
-				}}				
+				tintColor={'blue'}				
 			/>
 		)
 	}
@@ -64,9 +61,7 @@ class IconCar extends Component{
 				}}
 				width={60}
 				height={120}
-				style={{
-					backgroundColor: 'green'
-				}}				
+				tintColor={'green'}				
 			/>
 		)
 	}

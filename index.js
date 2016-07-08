@@ -12,7 +12,7 @@ import {
 export default class CropImage extends Component{
     render() {
 
-        let {source, crop, width, height, children, style, onPress} = this.props;
+        let {source, crop, width, height, children, tintColor, onPress} = this.props;
 
         crop = crop || source.crop || {};
 
@@ -21,13 +21,15 @@ export default class CropImage extends Component{
         crop.width = crop.width || width;
         crop.height = crop.height || height;
 
+        let bgColor = tintColor ? {backgroundColor: tintColor} : {};
+
         return (
                 <View style={[{
                     overflow: 'hidden',
                     height: crop.height,
                     width: crop.width,
                     backgroundColor: 'transparent'
-                }, style]}>
+                }, bgColor]}>
                     <Image
                         onPress={onPress} 
                         style={{
@@ -53,12 +55,11 @@ export default class CropImage extends Component{
         width: PropTypes.number.isRequired,
         height: PropTypes.number.isRequired,
         onPress: PropTypes.func,
-        style: PropTypes.object
+        tintColor: PropTypes.string
     };
 
     static defaultProps = {
-        onPress: ()=>{},
-        style:{}
+        onPress: ()=>{}
     };
 }
 
