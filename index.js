@@ -1,10 +1,14 @@
 import React, {Component, PropTypes} from 'react';
 import {
     Image,
-    View,
-    TouchableWithoutFeedback
+    View
 } from 'react-native';
 
+/**
+ * CropImage
+ * 处理雪碧图
+ * @class CropImage
+ */
 export default class CropImage extends Component{
     render() {
 
@@ -35,7 +39,6 @@ export default class CropImage extends Component{
                         source={source} 
                         resizeMode='contain'
                     >
-                        {children}
                     </Image>
                 </View>
         );
