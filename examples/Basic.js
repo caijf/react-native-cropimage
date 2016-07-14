@@ -7,8 +7,7 @@ import {
 	TouchableHighlight
 } from 'react-native';
 
-import CropImage from '../../libs/react-native-cropimage/';
-
+import CropImage from 'react-native-cropimage';
 
 class IconHotel extends Component{
 	render(){
@@ -16,14 +15,13 @@ class IconHotel extends Component{
 			<CropImage
 				source={require('./icon-business.png')}
 				crop={{
-					top: 0,
-					left: 0,
+					top: -1,
+					left: -1,
 					width: 20,
 					height: 20
 				}}
 				width={60}
 				height={120}
-				tintColor={'red'}				
 			/>
 		)
 	}
@@ -35,14 +33,13 @@ class IconTrain extends Component{
 			<CropImage
 				source={require('./icon-business.png')}
 				crop={{
-					top: 20,
-					left: 0,
+					top: 19,
+					left: -1,
 					width: 20,
 					height: 20
 				}}
 				width={60}
 				height={120}
-				tintColor={'blue'}				
 			/>
 		)
 	}
@@ -54,14 +51,13 @@ class IconCar extends Component{
 			<CropImage
 				source={require('./icon-business.png')}
 				crop={{
-					top: 40,
-					left: 0,
+					top: 39,
+					left: -1,
 					width: 20,
 					height: 20
 				}}
 				width={60}
 				height={120}
-				tintColor={'green'}				
 			/>
 		)
 	}
@@ -78,20 +74,20 @@ export default class MyApp extends Component{
 				}
 			]}>
 				<TouchableHighlight onPress={()=>{alert('click hotel icon')}}>
-					<View>
+					<View style={{ backgroundColor: 'red'}}>
 						<IconHotel />
 					</View>
 				</TouchableHighlight>
 
 				<TouchableHighlight onPress={()=>{alert('click train icon')}}>
-					<View>
+					<View style={{ backgroundColor: 'blue'}}>
 						<IconTrain />
 					</View>
 				</TouchableHighlight>
 
 
 				<TouchableHighlight onPress={()=>{alert('click car icon')}}>
-					<View>
+					<View style={{ backgroundColor: 'black'}}>
 						<IconCar />
 					</View>
 				</TouchableHighlight>
